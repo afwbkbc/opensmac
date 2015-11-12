@@ -1,3 +1,5 @@
+#include <cstdlib>
+
 #include "WorldTestTask.h"
 
 #include "scene/mesh/Vec3Mesh.h"

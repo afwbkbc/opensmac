@@ -12,16 +12,16 @@ Entity::Entity() {
 
 #define _XYZ_SETTER( _name, _var, _updates ) \
 const types::Vec3 Entity::Get##_name() const {\
-	return m_angle;\
+	return m_##_var;\
 }\
 const float Entity::Get##_name##X() const {\
-	return m_angle.x;\
+	return m_##_var.x;\
 }\
 const float Entity::Get##_name##Y() const {\
-	return m_angle.y;\
+	return m_##_var.y;\
 }\
 const float Entity::Get##_name##Z() const {\
-	return m_angle.z;\
+	return m_##_var.z;\
 }\
 void Entity::Set##_name( const types::Vec3 & value ) {\
 	m_##_var = value;\
@@ -30,8 +30,6 @@ void Entity::Set##_name( const types::Vec3 & value ) {\
 void Entity::Set##_name##X( const float value ) {\
 	m_##_var.x = value;\
 	_updates;\
-/*	UpdateRotation();\
-	UpdateMatrix();*/\
 }\
 void Entity::Set##_name##Y( const float value ) {\
 	m_##_var.y = value;\
